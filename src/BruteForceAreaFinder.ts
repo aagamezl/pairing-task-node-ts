@@ -16,5 +16,13 @@ export class BruteForceAreaFinder implements AreaFinder {
 
     public findPointsInside(rect: Rectangle, consumer: PointConsumer) {
          // TODO: implement
+
+        for (let index = 0; index < this.fullDataSet.length; index++) {
+            if (rect.contains(this.fullDataSet[index])) {
+                consumer.consumePoint(this.fullDataSet[index])
+            }
+        }
+
+        return this.fullDataSet
     }
 }

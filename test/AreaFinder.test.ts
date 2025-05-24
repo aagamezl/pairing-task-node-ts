@@ -16,6 +16,8 @@ beforeAll(() => {
     dataset = DataSet.ReadDataPoints(DATASET_CSV)
     expectedResult = DataSet.ReadDataPoints(EXPECTED_DATASET_CSV)
     rect = new Rectangle(-0.1, -0.1, 0.1, 0.1)
+
+    // console.log(dataset);
 });
 
 test('Brute Force Area Finder', () => {
@@ -34,6 +36,8 @@ class PointCollector implements PointConsumer {
 
     public consumePoint(point: DataPoint) {
         // todo: implement
+
+        return this.results.push(point)
     }
 
     public getConsumedPoints() {

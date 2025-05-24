@@ -24,6 +24,8 @@ export class Rectangle extends Quadrilateral {
     }
 
     contains(point:DataPoint): boolean {
-        return false
+        // return false
+        return point.x >= this.x1 && point.x <= this.x2 &&
+            point.y >= this.y1 && point.y <= this.y2
     }
 }

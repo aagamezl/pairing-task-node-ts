@@ -18,8 +18,8 @@ export class DataPoint {
     }
 
     toString() {
-        console.log(this.x);
-        console.log(this.y);
+        // console.log(this.x);
+        // console.log(this.y);
     }
 
 }
